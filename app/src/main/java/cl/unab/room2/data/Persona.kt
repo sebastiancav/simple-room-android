@@ -1,4 +1,4 @@
-package cl.unab.room2
+package cl.unab.room2.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

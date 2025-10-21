@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt") // plugin para usar room
+    alias(libs.plugins.google.ksp) // plugin para usar room
 }
 
 android {
@@ -48,11 +48,14 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
+    implementation("androidx.fragment:fragment-ktx:1.8.5")
+
     // room y otras dependencias necesarias
     val roomVersion = "2.6.1"
     implementation("androidx.room:room-runtime:$roomVersion")
-    kapt("androidx.room:room-compiler:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
     // --
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

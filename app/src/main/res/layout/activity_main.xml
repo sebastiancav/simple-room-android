@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <EditText
         android:id="@+id/etNombre"
@@ -40,5 +40,13 @@
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:textSize="18sp"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/contenedorFragment"
+        android:name="cl.unab.room2.ui.ListaPersonasFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_lista_personas" />
 
 </LinearLayout>

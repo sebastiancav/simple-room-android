@@ -1,4 +1,4 @@
-package cl.unab.room2
+package cl.unab.room2.data
 
 import android.content.Context
 import androidx.room.Database
@@ -8,7 +8,6 @@ import androidx.room.RoomDatabase
 @Database(entities = [Persona::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun personaDao(): PersonaDao
-
     companion object {
         private var instancia: AppDatabase? = null
 
